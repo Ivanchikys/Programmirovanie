@@ -1,0 +1,16 @@
+a = int(input('Введите а: '))
+b = int(input('Введите b: '))
+c = int(input('Введите c: '))
+d = int(input('Введите d: '))
+k = int(input('Введите k: '))
+f = int(input('Введите f: '))
+
+primer1 = abs(((a ** 2) / (b ** 2) + (c ** 2) * (a ** 2)) / ((a + b + c) * (k - a / b ** 3)) + c + (k / b - k / a) * c)
+primer2 = abs(((a ** 2) - (b ** 3) - c ** 3 * (a ** 2)) * ( b - c + c * (k - d / b ** 3)) - (( k / b - k / a) * c ** 2) - 20000)
+primer3 = abs(1 - a * (b ** c) - a * ((b ** 2) - c ** 2) + (b - c + a) * (12 + b) / (c - a))
+primer4 = abs(a - (b * c * d ** 3) + ((c ** 5) - a ** 2) / a + (f ** 3) * (a - 213))
+
+print('1 =', primer1)
+print('2 =', primer2)
+print('3 =', primer3)
+print('4 =', primer4)
