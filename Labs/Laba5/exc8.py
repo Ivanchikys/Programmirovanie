@@ -1,12 +1,12 @@
 #Определите, есть ли в списке повторяющиеся элементы, если да, то вывести на экран это значение. Вторично дублировать выведенное значение не нужно.
-numbers = [3, 4, 6, 8, 9, 8, 3, 6, 8, 8]
-temp = set()            #хранилище безповторных
-replay = set()          #хранилище повторных
+from random import randint
 
-for number in numbers:         #перебор эл. в списке
-    if number in temp:        #если эл. есть в темпе
-        replay.add(number)      #то добавляет в реплей
-    else:
-        temp.add(number)        #добавляем в темп
+table1 = [randint(1, 15)
+       for i in range(15)]
+table2 = []
 
-print(list(replay))
+for i in range(len(table1)):
+    if table1.count(table1[i]) > 1 and table1[i] not in(table2):
+        table2.append(table1[i])
+
+print(table2)
