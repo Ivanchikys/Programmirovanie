@@ -1,23 +1,18 @@
+from random import randint
 
-#n = int(input('Введите кол-во строк: '))
-#m = int(input('Введите кол-во столбцов: '))
+n = int(input('Введите количество строк:'))
+m = int(input('Введите количество столбцов:'))
 
-#matrix = [
-            #[i * j for j in range(m)]
-            #for i in range(n)              ]
-#print(matrix)
+originalM = [[randint(1,9) for j in range(m)]  for i in range(n)]
+rotatedM = [[[0] * n for i in range(n)] for j in range(m)] 
 
-#for element in matrix:
-    #print(' '.join([str(a) for a in element]))
+for i in range(n):   
+    for j in range(m):    
+        rotatedM[j][n-1-i] = originalM[i][j]
 
-#rows = len(matrix)
-#cols = len(matrix[0])
-#for r in range(rows):
-    #for c in range(r):
-        #matrix[r][c], matrix[c][r] = matrix[c][r], matrix[r][c]
-            
-    #for r in range(rows):
-        #for c in range(cols // 2):
-            #matrix[r][c], matrix[r][cols - c - 1] = matrix[r][cols - c - 1], matrix[r][c]
-#for element in matrix:
-    #print(' '.join([str(a) for a in element]))
+for row in  originalM: 
+    print(' '.join([str(elem)for elem in row]))
+
+
+for row in  rotatedM: 
+    print(' '.join([str(elem)for elem in row]))
