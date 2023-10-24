@@ -1,0 +1,27 @@
+var
+x,y,q:real;
+
+Function result(x:real):real;
+
+begin
+
+result:= 2.5 + sin(x + 1.5);
+
+end;
+
+begin
+
+q:= 0.01; x:= 0.01;
+
+while x <= 0.09 do
+
+  begin
+  y:= result(x);
+  writeln('x =',x:5:2,' y=',y:5:2);
+  x:=x+q
+  end;
+
+readln;
+
+end.
+
