@@ -27,6 +27,7 @@ errorMessages = {
     'tooLong': 'Максимальная длина хэш-тега - 20 символов',
     'tooMany': 'Нельзя указать больше 5 хэш-тегов',
 }
+
 def validateHashtags(hashtags):
     messages = ''
      
@@ -45,7 +46,7 @@ def validateHashtags(hashtags):
         if hashtag == '#':
             errors['notOneSymbol'] = True
         
-        if hashtag.find('#',1) != -1:
+        if hashtag.find('#',1) != -1: 
             errors['spaces'] = True
         
         if hashtags.count(hashtag) > 1: 
@@ -66,6 +67,6 @@ def validateHashtags(hashtags):
     
     return ' '.join(hashtags)
 
-hashtags =  '#yalta #grodno #python #Dzerzhinskogo #Paparaci papalepka #Jamajka #Jamajka  '            #input('Введите хеш-теги')  
+hashtags = input('Введите хеш-теги ')  #hashtags =  '#yalta #grodno #python #Dzerzhinskogo #Paparaci papalepka #Jamajka #Jamajka  '            
 
 print(validateHashtags(hashtags))
