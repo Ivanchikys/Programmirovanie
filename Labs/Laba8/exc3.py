@@ -10,7 +10,7 @@
 #● теги нечувствительны к регистру: #ХэшТег и #хэштег считаются одним и тем же тегом. F 
 
 #Если валидация не соответствует требованиям, необходимо сформировать и вывести на экран строку, содержащую перечень ошибок
-errors = {
+error = {
     'startWith': False,
     'notOneSymbol': False,
     'spaces': False,
@@ -29,7 +29,6 @@ errorMessages = {
 }
 
 def validateHashtags(hashtags):
-    messages = ''
      
     if not hashtags:    
         return []
@@ -39,34 +38,27 @@ def validateHashtags(hashtags):
     hashtags = [hashtag.lower() for hashtag in hashtags]
 
     for hashtag in hashtags:
+        error['startWith'] = not hashtag.startswith('#') or error['startWith']
+        error['notOneSymbol'] = hashtag == '#' or error['notOneSymbol']
+        error['spaces'] = hashtag.find('#',1) != -1 or  error['spaces']
+        error['unique'] = hashtags.count(hashtag) > 1 or  error['unique']
+        error['tooLong'] = len(hashtag) > 20 or error['tooLong']
+    error['tooMany'] = len(hashtags) > 5 or  error['tooMany']
 
-        if not hashtag.startswith('#'):
-            errors['startWith'] = True
-       
-        if hashtag == '#':
-            errors['notOneSymbol'] = True
-        
-        if hashtag.find('#',1) != -1: 
-            errors['spaces'] = True
-        
-        if hashtags.count(hashtag) > 1: 
-            errors['unique'] = True
-        
-        if len(hashtag) > 20:
-            errors['tooLong']  = True
+def printMessage (text):
+    messages = ''
 
-    if len(hashtags) > 5: 
-        errors['tooMany'] = True
+    validateHashtags(text)
 
-    for errorName in errors:
-        if errors[errorName]:
+    for errorName in error:
+        if error[errorName]:
             messages += '\n' + errorMessages[errorName]
 
     if len(messages)  != 0:
         return messages
     
-    return ' '.join(hashtags)
+    return ' '.join(text)
 
-hashtags = input('Введите хеш-теги ')  #hashtags =  '#yalta #grodno #python #Dzerzhinskogo #Paparaci papalepka #Jamajka #Jamajka  '            
+hashtags = input('Введите хеш-теги ')                   #hashtags =  '#yalta #grodno #python #Dzerzhinskogo #Paparaci papalepka #Jamajka #Jamajka  '            
 
-print(validateHashtags(hashtags))
+print(printMessage(hashtags))
