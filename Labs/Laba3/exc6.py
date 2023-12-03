@@ -2,6 +2,7 @@ iterations = int(input("Введите N: "))
 
 if iterations > 100: 
     print("Вы ввели N, превышающее 100, программа выполняться не будет.")
+    
 else: 
     s = 1
 
