@@ -1,0 +1,15 @@
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\bin\Debug\net8.0\ConsoleApp4.exe
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\bin\Debug\net8.0\ConsoleApp4.deps.json
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\bin\Debug\net8.0\ConsoleApp4.runtimeconfig.json
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\bin\Debug\net8.0\ConsoleApp4.dll
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\bin\Debug\net8.0\ConsoleApp4.pdb
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\obj\Debug\net8.0\ConsoleApp4.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\obj\Debug\net8.0\ConsoleApp4.AssemblyInfoInputs.cache
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\obj\Debug\net8.0\ConsoleApp4.AssemblyInfo.cs
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\obj\Debug\net8.0\ConsoleApp4.csproj.CoreCompileInputs.cache
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\obj\Debug\net8.0\ConsoleApp4.sourcelink.json
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\obj\Debug\net8.0\ConsoleApp4.dll
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\obj\Debug\net8.0\refint\ConsoleApp4.dll
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\obj\Debug\net8.0\ConsoleApp4.pdb
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\obj\Debug\net8.0\ConsoleApp4.genruntimeconfig.cache
+D:\Programmirovanie\C#\ConsoleApp4\ConsoleApp4\obj\Debug\net8.0\ref\ConsoleApp4.dll

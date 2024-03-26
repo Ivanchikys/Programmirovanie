@@ -1,0 +1,15 @@
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\bin\Debug\net8.0\ConsoleApp2.exe
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\bin\Debug\net8.0\ConsoleApp2.deps.json
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\bin\Debug\net8.0\ConsoleApp2.runtimeconfig.json
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\bin\Debug\net8.0\ConsoleApp2.dll
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\bin\Debug\net8.0\ConsoleApp2.pdb
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.AssemblyInfoInputs.cache
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.AssemblyInfo.cs
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.csproj.CoreCompileInputs.cache
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.sourcelink.json
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.dll
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\obj\Debug\net8.0\refint\ConsoleApp2.dll
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.pdb
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.genruntimeconfig.cache
+D:\Programmirovanie\C#\ConsoleApp2\ConsoleApp2\obj\Debug\net8.0\ref\ConsoleApp2.dll
