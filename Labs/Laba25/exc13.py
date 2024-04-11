@@ -12,7 +12,7 @@ class MainApp(App):
 
         BUTTON_SIZE = (0.2, 0.1)
 
-        button = Button(text = "Нажми меня",
+        button = Button(text = "Тыкни на меня",
                         size_hint = BUTTON_SIZE,
                         pos_hint = {"center_x": 0.5, "center_y": 0.5})
         button.bind(on_press = self.move_button)

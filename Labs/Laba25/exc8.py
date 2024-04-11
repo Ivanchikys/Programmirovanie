@@ -17,7 +17,8 @@ class CanvasWidget(Widget):
  
             self.rect = Rectangle(pos = self.center,
                                   size = (self.width / 2.,
-                                        self.height / 2.))
+                                        self.height / 2.)
+                                        )
 
             self.bind(pos = self.update_rect,
                       size = self.update_rect)
@@ -33,7 +34,8 @@ class CanvasApp(App):
         layout = BoxLayout(orientation = 'horizontal')
         label = Label(text = 'Lorem ipsum',
                         size_hint = (0.3, 0.3),
-                        pos_hint = {'center_x': 0.5, 'center_y': 0.5})
+                        pos_hint = {'center_x': 0.5, 'center_y': 0.5}
+                        )
         
         layout.add_widget(CanvasWidget())
         layout.add_widget(label)

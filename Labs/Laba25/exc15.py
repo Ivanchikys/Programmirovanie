@@ -18,7 +18,8 @@ class MyApp(App):
       for i in range(BUTTONS_NUM):
             button = DraggableButton(text = f"Кнопка {i+1}",
                                      size_hint = BUTTON_SIZE,
-                                     pos = (randint(0, 600), randint(0, 600)))
+                                     pos = (randint(0, 600), randint(0, 600))
+                                     )
             layout.add_widget(button)
 
       return layout

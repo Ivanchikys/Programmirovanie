@@ -10,13 +10,16 @@ class MainApp(App):
         
         button1 = Button(text = "Кнопка 1",
                          size_hint = BUTTON_SIZE, 
-                         pos_hint = {"center_x": 0.5, "y": 0.6})
+                         pos_hint = {"center_x": 0.5, "y": 0.6}
+                         )
         button2 = Button(text = "Кнопка 2", 
                          size_hint = BUTTON_SIZE, 
-                         pos_hint = {"x": 0.3, "y": 0.5})
+                         pos_hint = {"x": 0.3, "y": 0.5}
+                         )
         button3 = Button(text = "Кнопка 3", 
                          size_hint = BUTTON_SIZE, 
-                         pos_hint = {"x": 0.5, "y": 0.5})
+                         pos_hint = {"x": 0.5, "y": 0.5}
+                         )
         
         layout.add_widget(button1)
         layout.add_widget(button2)

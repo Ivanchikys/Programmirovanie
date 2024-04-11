@@ -10,7 +10,8 @@ class MainApp(App):
         
         button = Button(text = "Кнопка",
                          size_hint = BUTTON_SIZE,
-                         pos_hint = {"right": 1, "bottom": 1})
+                         pos_hint = {"right": 1, "bottom": 1}
+                         )
         
         layout.add_widget(button)
         

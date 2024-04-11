@@ -33,7 +33,8 @@ class CanvasApp(App):
         layout = BoxLayout(orientation = 'vertical')
         button = Button(text = 'button',
                         size_hint = (0.3, 0.3),
-                        pos_hint = {'center_x': 0.5, 'center_y': 0.2})
+                        pos_hint = {'center_x': 0.5, 'center_y': 0.2}
+                        )
         
         layout.add_widget(CanvasWidget())
         layout.add_widget(button)

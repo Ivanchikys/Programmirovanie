@@ -9,10 +9,12 @@ class MainApp(App):
         
         button1 = Button(text = "Кнопка 1", 
                          size_hint = BUTTON_SIZE, 
-                         pos_hint = {"x": 0, "top": 1})
+                         pos_hint = {"x": 0, "top": 1}
+                         )
         button2 = Button(text = "Кнопка 2", 
                          size_hint = BUTTON_SIZE, 
-                         pos_hint = {"x": 0.2, "top": 1})
+                         pos_hint = {"x": 0.2, "top": 1}
+                         )
         
         layout.add_widget(button1)
         layout.add_widget(button2)

@@ -4,7 +4,7 @@ from kivy.app import App
 
 class GridLayoutApp(App):
     def build(self):
-        layout = GridLayout(cols=4, rows=2) 
+        layout = GridLayout(cols = 4, rows = 2) 
 
 
         for num in range(8):

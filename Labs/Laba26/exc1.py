@@ -7,7 +7,7 @@ PATH = 'D:/Programmirovanie/Labs/Laba24/picture/'
 
 class GridLayoutApp(App):
     def build(self):
-        layout = GridLayout(cols=3, rows=3)   
+        layout = GridLayout(cols = 3, rows = 3)   
 
         pictures = ['5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpg', '12.jpg', '13.jpg',]
 
