@@ -11,11 +11,9 @@ from kivy.app import App
 class CanvasWidget(Widget):
      
     def __init__(self, **kwargs):
- 
         super(CanvasWidget, self).__init__(**kwargs)
- 
+
         with self.canvas:
- 
             Color(0.419, 419, 163, .6)  
  
             self.rect = Rectangle(pos = self.center,
@@ -33,60 +31,97 @@ class CanvasWidget(Widget):
 
 
 class GridLayoutApp(App):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.equals_pressed = False
+
+         
     def on_button_press(self, instance):
-        number = instance.text
-        self.text_null.text += number 
-        print(f"Вы нажали кнопку с числом {number}")   #ОТЛАДКА
+        if len(self.text_null.text) > 20:
+            return False
 
-    #def Equals(self,Result, instance):
-     #   Result = instance.text
-      #  Result = 
+        if self.equals_pressed:
+            self.text_null.text = instance.text
+            self.equals_pressed = False
+            return False
+        
+        self.text_null.text += instance.text
 
-    #def Plus(self,instance):
-        #if self.button_Equals(on_press = self.on_button_press)
-            
+    # def on_clear_press(self, instance):
+    #     if self.clear_pressed :
+    #         self.memory.clear()
 
+    def on_equal_press(self, instance):
+        self.equals_pressed = True
+
+        if self.text_null.text != '':
+            self.memory.append(int(self.text_null.text))
+
+        self.text_null.text = str(sum(self.memory))
+        self.memory.clear()
+
+    def on_plus_press(self, instance):
+        self.memory.append(int(self.text_null.text))
+        self.text_null.text = ''
 
     def build(self):
-        Calculater_layout = BoxLayout(orientation =  'vertical')
+        self.memory = []
+
+        Calculater_layout = BoxLayout(orientation = 'vertical')
 
         Display_layout = FloatLayout(size_hint_y = None,
-                                     height =  150 
-                                   )
-        self.text_null = Label (text = '_',
-                           font_size = '50px',
-                           pos_hint = {'x': 0.3, 'y': 0.01}
-                           )
+                                     height =  150
+                                    )
+
+        self.text_null = Label(text = '', 
+                               size_hint = (0.75, 1), 
+                               pos_hint = ({"right": 0.85 , "top": 0.65}),
+                               font_size = '50px', 
+                               halign = "right", 
+                               valign = "top"
+                               )
+        self.text_null.bind(size = self.text_null.setter('text_size'))
 
         Display_layout.add_widget(self.text_null)
         Display_layout.add_widget(CanvasWidget())
 
+        self.button_Clear = Button (text = 'C',
+                              size_hint = (0.1, 0.1),
+                              pos_hint = ({"right": 0.11 , "top": 0.65}), 
+                               halign = "left", 
+                               valign = "top"
+                              )
+        self.button_Clear.bind(on_press = self.on_clear_press)
+        Display_layout.add_widget(self.button_Clear)
 
         Numpad_layout = GridLayout(cols = 3, rows = 4) 
         BUTTON_SIZE = (0.2, 0.2)
 
+
         for num in range(10):
             button = Button(text = str(num),
-                            size_hint = (BUTTON_SIZE),
+                            size_hint = (BUTTON_SIZE)
                             )
             Numpad_layout.add_widget(button)
-            button.bind(on_press=self.on_button_press)
+            button.bind(on_press = self.on_button_press)
  
         button_Plus = Button (text = '+',
                               size_hint = (BUTTON_SIZE),
                               )
-        button_Plus.bind(on_press = self.on_button_press)
+        button_Plus.bind(on_press = self.on_plus_press)
         Numpad_layout.add_widget(button_Plus)
+
+
         button_Equals = Button (text = '=',
                                 size_hint = (BUTTON_SIZE)
                                 )
-        button_Equals.bind(on_press = self.on_button_press)
+        button_Equals.bind(on_press = self.on_equal_press)
         Numpad_layout.add_widget(button_Equals)
 
 
         Calculater_layout.add_widget(Display_layout)
         Calculater_layout.add_widget(Numpad_layout)
-        
+       
 
 
         return Calculater_layout
