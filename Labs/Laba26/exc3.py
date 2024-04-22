@@ -24,18 +24,17 @@ class GridLayoutApp(App):
         
         if len(self.text_null.text) > 25:
             return False
-        
-        if text_null.text not in string.digits and self.text_null.text.endswith(text_null.text):
-            return
-
+  
         if self.is_result_showed and text_null.text in string.digits:
-            self.text_null.text = ''
+             self.text_null.text = ''
 
         if text_null.text == '=':
             self.is_result_showed = True
             self.calculate(text_null)
+            
         elif text_null.text == 'C':
             self.text_null.text = ''
+
         else:
             self.is_result_showed = False
             self.text_null.text += text_null.text
