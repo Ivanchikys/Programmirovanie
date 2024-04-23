@@ -9,7 +9,7 @@ from kivy.uix.label import Label
 
 
 class GridLayoutApp(App):
-
+    
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.is_result_showed = False
@@ -21,8 +21,9 @@ class GridLayoutApp(App):
             self.text_null.text = "error"
         
     def button_works(self, text_null: Button):
+        NUMBER_BORDER = 25
         
-        if len(self.text_null.text) > 25:
+        if len(self.text_null.text) > NUMBER_BORDER:
             return False
   
         if self.is_result_showed and text_null.text in string.digits:
