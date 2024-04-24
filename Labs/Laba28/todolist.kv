@@ -1,0 +1,22 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: None
+        height: 150
+
+        TextInput:
+            id: text_input
+            hint_text: ""
+
+        Button:
+            text: "Добавить заметку"
+            on_press: app.add_new_task(text_input)
+
+    GridLayout:
+        id: task_list
+        cols: 1
+        size_hint_y: 0.8
+        padding: 10
+        spacing: 10
